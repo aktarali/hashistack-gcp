@@ -1,7 +1,7 @@
 provider "google" {
   project     = "${var.gcp_project}"
   region      = "${var.gcp_region}"
-  credentials = "./gce-credentials.json"
+  credentials = "${file(pathexpand("~/config/gce-credentials.json"))}"
 }
 
 terraform {
@@ -92,7 +92,7 @@ module "nomad_and_consul_servers" {
 
 module "gce-lb-http" {
   source            = "modules/google-lb-http"
-  name              = "leto-ci-http-lb"
+  name              = "doxlon-ci-http-lb"
   target_tags       = ["${module.nomad_client.instance_group_name}"]
   backends          = {
     "0" = [

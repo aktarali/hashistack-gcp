@@ -1,6 +1,6 @@
 variable "gcp_project" {
   description = "Terraform Admin"
-  default = "red-abstraction-182709"
+  default = "doxlon-demo"
 
 }
 
@@ -46,12 +46,12 @@ variable "vault_cluster_name" {
 
 variable "vault_source_image" {
   description = "The Google Image used to launch each node in the Consul Server cluster. You can build this Google Image yourself at /examples/vault-consul-image."
-  default = "nomad-vault-consul-2018-03-19-094706"
+  default = "nomad-vault-consul-2018-07-26-014748"
 }
 
 variable "jenkins-ci_source_image" {
   description = "The Google Image used to launch each node in the Consul Server cluster. You can build this Google Image yourself at /examples/vault-consul-image."
-  default = "nomad-vault-consul-2018-03-19-094706"
+  default = "nomad-vault-consul-2018-07-26-014748"
 }
 
 # Nomad Server cluster
@@ -63,7 +63,7 @@ variable "nomad_consul_server_cluster_name" {
 
 variable "nomad_consul_server_source_image" {
   description = "The Google Image used to launch each node in the Nomad/Consul Server cluster."
-  default = "nomad-vault-consul-2018-03-19-094706"
+  default = "nomad-vault-consul-2018-07-26-014748"
 }
 
 # Nomad Client cluster
@@ -75,7 +75,7 @@ variable "nomad_client_cluster_name" {
 
 variable "nomad_client_source_image" {
   description = "The Google Image used to launch each node in the Nomad client cluster."
-  default = "nomad-vault-consul-2018-03-19-094706"
+  default = "nomad-vault-consul-2018-07-26-014748"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -111,12 +111,12 @@ variable "gcs_bucket_force_destroy" {
 
 variable "vault_cluster_size" {
   description = "The number of nodes to have in the Vault Server cluster. We strongly recommended that you use either 3 or 5."
-  default = 5
+  default = 3
 }
 
 variable "consul_server_cluster_size" {
   description = "The number of nodes to have in the Consul Server cluster. We strongly recommended that you use either 3 or 5."
-  default = 5
+  default = 3
 }
 
 variable "web_proxy_port" {
@@ -128,7 +128,7 @@ variable "web_proxy_port" {
 
 variable "nomad_consul_server_cluster_size" {
   description = "The number of nodes to have in the Nomad Server cluster. We strongly recommended that you use either 3 or 5."
-  default = 5
+  default = 3
 }
 
 variable "nomad_consul_server_cluster_machine_type" {

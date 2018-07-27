@@ -108,7 +108,7 @@ variable "allowed_inbound_cidr_blocks_serf" {
 }
 
 variable "network_name" {
-  description = "Leto dev network"
+  description = "Doxlon dev network"
 }
 
 variable "subnetwork_link" {

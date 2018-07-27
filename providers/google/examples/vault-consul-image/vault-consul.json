@@ -5,6 +5,7 @@
     "zone": null,
     "vault_version": "0.8.3",
     "consul_module_version": "v0.0.1",
+    "home": "{{env `HOME`}}",
     "consul_version": "1.0.0",
     "ca_public_key_path": null,
     "tls_public_key_path": null,
@@ -15,6 +16,7 @@
     "image_name": "vault-consul-{{isotime \"2006-01-02-030405\"}}",
     "image_family": "vault-consul",
     "project_id": "{{user `project_id`}}",
+    "account_file": "{{user `home`}}/config/gce-credentials.json",
     "source_image_family": "ubuntu-1604-lts",
     "zone": "{{user `zone`}}",
     "ssh_username": "ubuntu"
